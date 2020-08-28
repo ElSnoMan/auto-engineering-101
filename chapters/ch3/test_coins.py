@@ -14,11 +14,18 @@ def test_sum_nickels():
 
 
 def test_sum_dimes():
-    pytest.fail()
+    total = coins.sum_dimes(user_input='2')
+    assert total == 20
 
 
 def test_sum_quarters():
-    pytest.fail()
+    total = coins.sum_quarters(user_input='3')
+    assert total == 75
+
+
+def test_sum_all_coins():
+    total = coins.sum_all_coins(pennies='1', nickels='1', dimes='1', quarters='1')
+    assert total == 41
 
 
 def test_win_with_exact_dollar():
