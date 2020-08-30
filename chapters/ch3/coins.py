@@ -25,3 +25,16 @@ def sum_all_coins(pennies, nickels, dimes, quarters):
         sum_dimes(dimes),
         sum_quarters(quarters)
     ])
+
+
+def generate_result(total):
+    if total == 100:
+        return 'You win!'
+
+    if total < 100:
+        under = 100 - total
+        return f'You lose... You were under by {under} cents'
+
+    if total > 100:
+        over = total - 100
+        return f'You lose... You were over by {over} cents'

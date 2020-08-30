@@ -1,5 +1,3 @@
-import pytest
-
 from chapters.ch3 import coins
 
 
@@ -29,12 +27,18 @@ def test_sum_all_coins():
 
 
 def test_win_with_exact_dollar():
-    pytest.fail()
+    total = 100
+    message = coins.generate_result(total)
+    assert message == 'You win!'
 
 
 def test_lose_with_less_than_dollar():
-    pytest.fail()
+    total = 41
+    message = coins.generate_result(total)
+    assert message == 'You lose... You were under by 59 cents'
 
 
 def test_lose_with_more_than_dollar():
-    pytest.fail()
+    total = 125
+    message = coins.generate_result(total)
+    assert message == 'You lose... You were over by 25 cents'

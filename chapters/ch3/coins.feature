@@ -26,3 +26,15 @@ Feature: Change for a Dollar
     And '1' dime
     And '1' quarter
     Then the sum should be 41
+
+
+  Scenario Outline: Generate Game Result message
+    Given the grand total is {total}
+    When the result is calculated
+    Then the message should be {message}
+
+    Examples:
+      | total | message |
+      | 59    | 'You lose... You were under by 59 cents'|
+      | 125   | 'You lose... You were over by 25 cents' |
+      | 100   | 'You win!'                              |
