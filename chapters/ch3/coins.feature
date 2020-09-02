@@ -35,6 +35,6 @@ Feature: Change for a Dollar
 
     Examples:
       | total | message |
-      | 59    | 'You lose... You were under by 59 cents'|
+      | 41    | 'You lose... You were under by 59 cents'|
       | 125   | 'You lose... You were over by 25 cents' |
       | 100   | 'You win!'                              |
